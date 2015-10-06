@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Vivian Hsiao</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <script type="text/javascript">
+      function smartGreeting() {
+        var greeting = document.getElementById("greeting");
+        var d = new Date();
+        var days = ["Sunday", "Monday...rats", "Tuesday", "Wednesday", "Thursday",
+            "Friday! Woo", "Saturday"];
+        greeting.innerHTML = "Happy " + days[d.getDay()] + "!";
+      }
+      function squareAR() {
+        var socialmedia = document.getElementById("social-media");
+        var socialmedia_li = [].slice.call(socialmedia.getElementsByTagName("li"));
+        socialmedia_li.forEach(function(elt, idx, arr) {
+          elt.style.height = elt.clientWidth + "px";
+        })
+      }
+      window.onload = function() {
+        squareAR();
+        smartGreeting();
+      }
+      window.onresize = function() {
+        squareAR();
+      }
+    </script>
+  </head>
+  <body>
+    <div id="main-content">
+      <div id="text-area">
+        <h1 id="name">Vivian Hsiao</h1>
+        <p>
+        <span id="greeting">Hello!</span>
+        </br> 
+        </br> 
+        I am a second-year medical student at the Warren Alpert School of Medicine at Brown University, through the Brown University <a href="http://www.brown.edu/academics/medical/plme/">PLME program</a>.
+        </br> 
+        </br> 
+        My work and research has centered around computational biology and software solutions for healthcare. In the past, I worked as a data/engineering intern at <a href="http://www.kyruus.com">Kyruus</a> This past summer, I worked on analyzing HPLC data with high-dimensional statistics. This year at Brown, I'm helping to lead Brown's chapters of the American Medical Association and Asian Pacifica American Medical Student Association. A few classmates and I also created and are currently executing the first iteration of <a href="https://sites.google.com/a/brown.edu/addictions/home">Addiction Medicine</a>, a Preclinical Elective for first- and second- year medical students.
+        </p>
+        <p>Feel free to email me (vivian_hsiao [at] brown [dot] edu) or check out my other social media accounts:</p>
+        <ul id="social-media">
+          <li id="linkedin">
+          <a href="https://www.linkedin.com/pub/vivian-hsiao/36/b59/85"></a>
+          </li>
+          <li id="twitter">
+          <a href="https://twitter.com/hsiao_vivian"></a>
+          </li>
+          <li id="facebook">
+          <a href="https://facebook.com/vivian.saliferous"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
